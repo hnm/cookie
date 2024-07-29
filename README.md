@@ -1,1 +1,1 @@
-# cookie-consent
+# cookie
