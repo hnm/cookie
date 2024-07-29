@@ -1,0 +1,38 @@
+{
+	"name" : "hnm/cookie",
+	"type" : "n2n-tmpl-module",
+	"description" : "cookie banner for n2n",
+	"keywords" : [
+		"n2n",
+		"bootstrap"
+	],
+	"homepage" : "https://n2n.rocks/",
+	"license" : "LGPL-3.0-or-later",
+	"authors" : [{
+			"name" : "Thomas Jansen",
+			"email" : "jansen@hnm.ch"
+		}
+	],
+	"minimum-stability" : "dev",
+	"prefer-stable": true,
+	"require" : {
+		"php" : ">=7.0",
+		"n2n/n2n-composer-module-installer" : "^7.1.5"
+	},
+	"config" : {
+		"vendor-dir" : "src/vendor",
+		"allow-plugins": {
+			"n2n/n2n-composer-module-installer": true
+		}
+	},
+	"autoload" : {
+		"psr-4" : {
+			"hnm\\cookie\\" : "src/app/cookie"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"hnm\\cookie\\" : "src/test/cookie"
+		}
+	}
+}
