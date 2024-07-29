@@ -5,13 +5,16 @@ namespace cookie\ui;
 
 
 use n2n\impl\web\ui\view\html\HtmlView;
+use bstmpl\model\BsTemplateModel;
 
 class CookieHtmlBuilder {
 
-	public function __construct(HtmlView $view, $googleTagManagerId) {
+	public function __construct(HtmlView $view) {
 		$this->view = $view;
 		$this->html = $view->getHtmlBuilder();
 		$this->meta = $this->html->meta();
+
+		$this->meta->bodyEnd()->addJs('js/functions.js?v=' . BsTemplateModel::ASSETS_VERSION, 'cookie');
 	}
 
 
@@ -20,7 +23,7 @@ class CookieHtmlBuilder {
 	}
 
 	public function getCookieConsentBanner(string $googleTagManagerId) {
-		return $this->view->getImport('/cookie/view/consent.html', ['googleTagManagerId' => $googleTagManagerId]);
+		return $this->view->getImport('\cookie\view\inc\consent.html', ['googleTagManagerId' => $googleTagManagerId]);
 	}
 
 	public function addCookieConsentJS(string $googleTagManagerId) {
