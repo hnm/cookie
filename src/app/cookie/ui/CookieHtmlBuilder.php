@@ -6,7 +6,7 @@ namespace cookie\ui;
 
 use n2n\impl\web\ui\view\html\HtmlView;
 
-class TemplateHtmlBuilder {
+class CookieHtmlBuilder {
 
 	public function __construct(HtmlView $view, $googleTagManagerId) {
 		$this->view = $view;
