@@ -8,7 +8,9 @@ use n2n\impl\web\ui\view\html\HtmlView;
 use bstmpl\model\BsTemplateModel;
 
 class CookieHtmlBuilder {
-
+	private $view;
+	private $html;
+	private $meta;
 	public function __construct(HtmlView $view) {
 		$this->view = $view;
 		$this->html = $view->getHtmlBuilder();
