@@ -17,6 +17,8 @@ jQuery(document).ready(function($) {
 				"functionality_storage": consent.necessary ? "granted" : "denied",
 				"security_storage": consent.necessary ? "granted" : "denied",
 				"ad_storage": consent.marketing ? "granted" : "denied",
+				"ad_user_data": consent.marketing ? "granted" : "denied",
+				"ad_personalization": consent.marketing ? "granted" : "denied",
 				"analytics_storage": consent.analytics ? "granted" : "denied",
 				"personalization_storage": consent.preferences ? "granted" : "denied",
 			};
