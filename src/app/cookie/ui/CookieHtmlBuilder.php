@@ -38,7 +38,12 @@ class CookieHtmlBuilder {
 			
 			if (localStorage.getItem('consentMode') === null) {
 			gtag('consent', 'default', {
+			'marketing': 'denied',
+   			'analytics': 'denied',
+      			'preferences': 'denied',
 			'ad_storage': 'denied',
+			'ad_user_data': 'denied',
+   			'ad_personalization': 'denied',
 			'analytics_storage': 'denied',
 			'personalization_storage': 'denied',
 			'functionality_storage': 'denied',
